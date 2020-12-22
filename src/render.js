@@ -39,5 +39,5 @@ export function renderHeader(products) {
     header.innerHTML =
         totalProducts > 0
             ? `${totalProducts} produtos disponíveis`
-            : (header.innerHTMl = '0 produtos disponíveis');
+            : '0 produtos disponíveis';
 }
