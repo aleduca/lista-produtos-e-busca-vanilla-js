@@ -1,0 +1,15 @@
+{
+    "name": "lista-produtos-com-busca",
+    "version": "1.0.0",
+    "description": "",
+    "main": "index.js",
+    "scripts": {
+        "dev": "live-server --port=5000"
+    },
+    "keywords": [],
+    "author": "",
+    "license": "ISC",
+    "devDependencies": {
+        "live-server": "^1.2.1"
+    }
+}
