@@ -1,5 +1,5 @@
 import products from './products';
-import { formatter } from '../helpers/date';
+import { formatter } from '../helpers/format';
 import { listContainer } from './selectors';
 
 export function renderListAndHeader(products) {
