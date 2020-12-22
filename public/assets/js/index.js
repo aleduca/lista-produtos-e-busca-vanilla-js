@@ -93,7 +93,7 @@ function render(products) {
                     </div>
                     ${product.title} - ${formatter.format(product.price)}
                     <a href="#">
-                        <div class="product-button" data-remove="${product.id}">
+                        <div class="product-button" data-remove="${index}">
                             Remove
                         </div>
                     </a>
@@ -105,25 +105,23 @@ function render(products) {
     listContainer.innerHTML = list;
 }
 
-function removeProduct(productId) {
-    const index = products.findIndex((product) => {
-        return +product.id === +productId;
-    });
+function removeProduct(index) {
+    // const index = products.findIndex((product) => {
+    //     return +product.id === +productId;
+    // });
 
-    if (index > -1) {
-        products.splice(index, 1);
+    products.splice(index, 1);
 
-        if (search.value !== '') {
-            const productFiltered = productsFilterInSearch(search.value);
-            renderListAndHeader(productFiltered);
-            if (productFiltered.length == 0) {
-                search.value = '';
-            }
-            return;
+    if (search.value !== '') {
+        const productFiltered = productsFilterInSearch(search.value);
+        renderListAndHeader(productFiltered);
+        if (productFiltered.length == 0) {
+            search.value = '';
         }
-
-        renderListAndHeader(products);
+        return;
     }
+
+    renderListAndHeader(products);
 }
 
 document.body.addEventListener('click', function (event) {

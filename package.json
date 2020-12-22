@@ -4,12 +4,22 @@
     "description": "",
     "main": "index.js",
     "scripts": {
-        "dev": "live-server --port=5000"
+        "dev": "live-server public --port=5000",
+        "server": "NODE_ENV=development webpack --progress --watch"
     },
     "keywords": [],
     "author": "",
     "license": "ISC",
     "devDependencies": {
-        "live-server": "^1.2.1"
+        "live-server": "^1.2.1",
+        "webpack": "^4.44.2",
+        "webpack-cli": "^4.2.0",
+        "@babel/cli": "^7.10.5",
+        "@babel/core": "^7.11.4",
+        "@babel/preset-env": "^7.11.0",
+        "babel-loader": "^8.1.0"
+    },
+    "dependencies": {
+        "lodash": "^4.17.20"
     }
 }
